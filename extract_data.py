@@ -47,6 +47,7 @@ for row in BeautifulSoup(s[0])("tr"):
             # print obj_data
             data_map.append(obj_data)
         count += 1
+        
         # print obj_data
 
 print data_map
