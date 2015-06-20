@@ -1,4 +1,4 @@
-__author__ = 'minjar86'
+__author__ = 'upaang'
 import json
 import urllib2
 from BeautifulSoup import BeautifulSoup
