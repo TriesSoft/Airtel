@@ -21,12 +21,14 @@ for row in BeautifulSoup(s[0])("tr"):
     if count==0:
         for cell in row("td"):
             # print cell.text
+            if cell.text=='Recharge':
+                continue
             obj_data[str(cell.text)] = ""
         count += 1
         print obj_data
-        print(count)
-    elif count < 5:
+    elif count < 5000:
         val = 0
+        obj_data={}
         for cell in row("td"):
             # print cell.text
             if val==0:
@@ -45,7 +47,7 @@ for row in BeautifulSoup(s[0])("tr"):
             # val=0
             # print cell.text
             # print obj_data
-            data_map.append(obj_data)
+        data_map.append(obj_data)
         count += 1
 
         # print obj_data
