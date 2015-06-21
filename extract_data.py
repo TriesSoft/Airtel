@@ -1,3 +1,5 @@
+import json
+
 __author__ = 'upaang'
 import urllib2
 
@@ -25,10 +27,11 @@ for row in BeautifulSoup(s[0])("tr"):
                 continue
             obj_data[str(cell.text)] = ""
         count += 1
-        print obj_data
+        # print obj_data
     elif count < 5000:
         val = 0
         obj_data={}
+        obj_data_val={}
         for cell in row("td"):
             # print cell.text
             if val==0:
@@ -52,4 +55,5 @@ for row in BeautifulSoup(s[0])("tr"):
 
         # print obj_data
 
-print data_map
+# print data_map
+print json.dumps(data_map)
